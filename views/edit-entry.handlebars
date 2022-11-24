@@ -1,0 +1,30 @@
+<a href="/homepage" class="go-back"> &larr; Back to homepage</a>
+
+<article class="new-page">
+    <section class="edit-form-page">
+        <div class="form-heading">
+            <h2>
+                Edit Entry
+            </h2>
+        </div>
+        <div class="form-section">
+            <form class="edit-entry-form">
+                <div class="entry-title-section">
+                    <label for="entry-title">Title</label>
+                    <input type="text" name="entry-title" id="entry-title" value="{{entry.title}}" />
+                </div>
+                <div class="entry-content">
+                    <label for="entry-content">Content</label>
+                    <textarea class="entry-field" id="entry-content" name="entry-content">{{entry.content}}</textarea>
+                </div>
+                <button type="submit">Update entry</button>
+                <button type="button" class="delete-entry-btn">Delete entry</button>
+            </form>
+        </div>
+    </section>
+</article>
+
+{{#if loggedIn}}
+<script src="/javascript/edit-entry.js"></script>
+<script src="/javascript/delete-entry.js"></script>
+{{/if}}

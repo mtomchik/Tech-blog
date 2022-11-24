@@ -1,0 +1,23 @@
+<a href="/homepage" class="go-back"> &larr; Back to homepage</a>
+<br>
+<br>
+
+{{> entry-info entry}}
+
+{{#if loggedIn}}
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">add comment</button>
+    </div>
+</form>
+{{/if}}
+
+{{> comments entry.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}

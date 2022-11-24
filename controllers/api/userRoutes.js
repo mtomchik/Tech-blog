@@ -54,7 +54,7 @@ router.get('/:id', (req, res) => {
 });
 
 // Create a user
-router.entry('/', (req, res) => {
+router.post('/', (req, res) => {
     User.create({
             username: req.body.username,
             password: req.body.password
@@ -74,7 +74,7 @@ router.entry('/', (req, res) => {
         });
 })
 
-router.entry('/login', (req, res) => {
+router.post('/login', (req, res) => {
     User.findOne({
             where: {
                 username: req.body.username
@@ -121,7 +121,7 @@ router.entry('/login', (req, res) => {
         });
 });
 
-router.entry('/logout', (req, res) => {
+router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();

@@ -33,7 +33,7 @@ router.get('/', withAuth, (req, res) => {
             const entrys = dbEntryData.map(entry => entry.get({
                 plain: true
             }));
-            res.render('dashboard', {
+            res.render('homepage', {
                 entrys,
                 loggedIn: true
             });

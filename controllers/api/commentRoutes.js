@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 });
 
 //Create a comment
-router.entry('/', withAuth, (req, res) => {
+router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Comment.create({
                 comment_text: req.body.comment_text,

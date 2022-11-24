@@ -68,7 +68,7 @@ router.get("/:id", (req, res) => {
 });
 
 // Create a entry
-router.entry("/", withAuth, (req, res) => {
+router.post("/", withAuth, (req, res) => {
     console.log("creating");
     Entry.create({
             title: req.body.title,

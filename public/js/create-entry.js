@@ -1,8 +1,9 @@
 async function createEntryHandler(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    document.location.replace('/homepage/new')
+  document.location.replace('/dashboard/new');
 }
 
-
-document.querySelector('#create-new-entry').addEventListener('click', createEntryHandler);
+document
+  .querySelector('#create-new-entry')
+  .addEventListener('click', createEntryHandler);

@@ -6,10 +6,10 @@ async function signupFormHandler(event) {
 
     if (username && password) {
         const response = await fetch('/api/users', {
-            method: 'entry',
+            method: 'POST',
             body: JSON.stringify({
-                username,
-                password
+                username: username,
+                password: password,
             }),
             headers: {
                 'Content-Type': 'application/json'
@@ -17,7 +17,7 @@ async function signupFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/homepage');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }

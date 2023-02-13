@@ -1,11 +1,20 @@
+//*
+//* This is the setup for the '/api/' routes
+//*
+// set up Express router
 const router = require('express').Router();
 
-const userRoutes = require('./userroutes.js');
-const entryRoutes = require('./entryroutes.js');
-const commentRoutes = require('./commentRoutes.js');
+// set up route files here
+const userRoutes = require('./userRoutes');
+const dashboardRoutes = require('./dashboardRoutes');
+const postRoutes = require('./postsRoutes');
+const commentRoutes = require('./commentRoutes');
 
+// then set up Express router with all routes
 router.use('/users', userRoutes);
-router.use('/entrys', entryRoutes);
-router.use('/comments', commentRoutes)
+router.use('/dashboard', dashboardRoutes);
+router.use('/posts', postRoutes)
+router.use('/comments', commentRoutes);
 
+// export
 module.exports = router;

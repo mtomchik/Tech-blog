@@ -1,24 +1,30 @@
-<section class="sign-in-page">
-    <div class="form-heading">
-        <h1>Sign Up</h1>
+{{!-- This is the template to render the user signup fields --}}
+<div class="row justify-content-center">
+  <div class="col-md-3">
+  <div class="card my-3">
+    <div class="card-body">
+      <h3 class="card-title">Signup</h3>
+      <form class="signup-form">
+        <div class="mb-3">
+          <label for="username-signup">Username:</label>
+          <input class="form-control" type="text" id="username-signup" />
+        </div>
+        <div class="mb-3">
+          <label for="email-signup">Email:</label>
+          <input class="form-control" type="email" id="email-signup" />
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="password-signup">Password:</label>
+          <input class="form-control" type="password" id="password-signup" />
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" type="submit">signup</button>
+        </div>
+      </form>
     </div>
-    <div class="form-section">
-        <form class="signup-form">
-            <div>
-                <label for="username-signup">Select a Username</label>
-                <input type="text" class="entry-field" id="username-signup" />
-            </div>
-            <div>
-                <label for="password-signup">Select a password</label>
-                <input type="password" class="entry-field" id="password-signup" />
-            </div>
-            <div>
-                <button type="submit" class="login-signup-btn">Sign Up!</button>
-            </div>
-        </form>
-    </div>
-
-    <a href="/login" class="login-link">log in instead</a>
-</section>
-
+  </div>
+  </div>
+</div>
+{{!-- load the helper script to do a user signup --}}
 <script src="/js/signup.js"></script>

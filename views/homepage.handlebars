@@ -1,20 +1,11 @@
-<section class="new-entry-section">
-    <button type="submit" class="btn" id="create-new-entry">+ Create new entry</button>
-</section>
-
-
-{{#if entrys.length}}
-<section>
-    <h2>Your Homepage</h2>
-    <ul class="entry-list">
-        {{#each entrys as |entry|}}
-        <li>
-            {{> entry-info entry}}
-            <a href="/homepage/edit/{{entry.id}}" class="edit-link">edit entry</a>
-        </li>
+{{!-- This is the Handlebars template for the body of the home page --}}
+<div class="row justify-content-center">
+    <div class="col-11 mt-4">
+        <h1 class="shadow bg-secondary p-2 text-dark bg-opacity-10">Your Feed</h1>
+    </div>
+    <div class="col-12 col-md-11 col-xl-10 mt-3">
+        {{#each posts as |post| }}
+            {{> post-body post}}
         {{/each}}
-    </ul>
-</section>
-{{/if}}
-
-<script src="/js/create-entry.js"></script>
+    </div>
+</div>

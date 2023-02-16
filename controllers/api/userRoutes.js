@@ -10,7 +10,7 @@ const router = require('express').Router();
 
 //* Express route to CREATE new user
 router.post('/', async (req, res) => {
-  console.log("\n", "\x1b[33m", "Triggered route to create a new User in userRoutes", "\x1b[0m", "\n");
+  console.log( "Triggered route to create a new User in userRoutes");
   try {
     const dbUserData = await User.create({
       username: req.body.username,

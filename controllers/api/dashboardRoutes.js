@@ -14,7 +14,7 @@ const withAuth = require('../../utils/auth');
 //* user_id should match the post data
 //* this is for the user 'Dashboard'
 router.get("/", withAuth, async (req, res) => {
-	console.log("\n", "\x1b[33m", "Route for base Dashboard rendered", "\x1b[0m", "\n");
+	console.log();
 	try {
     const postData = await Post.findAll({
 		where: {

@@ -1,4 +1,4 @@
-const { Post } = require('../../seed/14-MVC-Tech-Blog/models');
+const { Post } = require('../models/Post');
 
 const postData = [
     {

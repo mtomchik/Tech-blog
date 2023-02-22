@@ -1,4 +1,4 @@
-const { Comment } = require('../../seed/14-MVC-Tech-Blog/models');
+const { Comment } = require('../models/Comment');
 
 const commentData = [
   {

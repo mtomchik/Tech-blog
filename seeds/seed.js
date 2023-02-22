@@ -1,10 +1,10 @@
 // seed the database with default data
 require('dotenv').config({ path: __dirname + `/../.env` });
-const sequelize = require('../../seed/14-MVC-Tech-Blog/config/connection');
+const sequelize = require('../config/connection');
 
 const seedComment = require('./comment-seed');
-const seedPost = require('../../../Tech-blog/seeds/post-seed');
-const seedUser = require('../../seed/14-MVC-Tech-Blog/seeds/user-seed');
+const seedPost = require('./post-seed');
+const seedUser = require('./user-seed');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
